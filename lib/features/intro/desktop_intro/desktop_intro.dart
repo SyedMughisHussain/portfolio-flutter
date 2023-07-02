@@ -42,7 +42,7 @@ class _DesktopIntroState extends State<DesktopIntro> {
                       backgroundColor: Colors.white,
                     ),
                     const SizedBox(
-                      width: 100,
+                      width: 99,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
