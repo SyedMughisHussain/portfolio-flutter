@@ -14,6 +14,15 @@ class MobileIntro extends StatelessWidget {
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
     return Container(
+        // decoration: const BoxDecoration(
+        //     gradient: LinearGradient(
+        //         begin: Alignment.topLeft,
+        //         end: Alignment.bottomRight,
+        //         colors: [
+        //       AppColors.purple,
+        //       AppColors.bgColor,
+        //       AppColors.bgColor,
+        //     ])),
         padding: EdgeInsets.symmetric(horizontal: w / 30),
         height: MediaQuery.of(context).size.height,
         child: Stack(
@@ -26,7 +35,7 @@ class MobileIntro extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  height: 130,
+                  height: 70,
                 ),
                 const CircleAvatar(
                   radius: 68,
@@ -37,12 +46,15 @@ class MobileIntro extends StatelessWidget {
                     backgroundImage: AssetImage(AppImages.selfImage),
                   ),
                 ),
-                const SizedBox(
-                  width: 99,
-                ),
+                // const SizedBox(
+                //   width: 99,
+                // ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
+                    const SizedBox(
+                      height: 20,
+                    ),
                     RichText(
                         text: const TextSpan(
                             style: TextStyle(
@@ -56,7 +68,7 @@ class MobileIntro extends StatelessWidget {
                               style: TextStyle(color: AppColors.purple)),
                         ])),
                     const SizedBox(
-                      height: 10,
+                      height: 20,
                     ),
                     SizedBox(
                       child: Row(
@@ -114,7 +126,7 @@ class MobileIntro extends StatelessWidget {
                                 height: 1.2,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Preah',
-                                fontSize: 35,
+                                fontSize: 30,
                                 color: Colors.white),
                             children: [
                               TextSpan(
@@ -126,7 +138,7 @@ class MobileIntro extends StatelessWidget {
                                   style: TextStyle(color: AppColors.purple)),
                             ])),
                     const SizedBox(
-                      height: 50,
+                      height: 40,
                     )
                   ],
                 ),
@@ -140,12 +152,12 @@ class MobileIntro extends StatelessWidget {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontFamily: 'Preah',
-                                fontSize: 16,
+                                fontSize: 22,
                               )),
                           TextSpan(
                               text: 'a Tech Enthusiast ',
                               style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 22,
                                   fontFamily: 'Preah',
                                   fontWeight: FontWeight.bold,
                                   backgroundColor:
@@ -154,14 +166,11 @@ class MobileIntro extends StatelessWidget {
                           TextSpan(
                               text: 'who loves sharing his coding journey!',
                               style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 22,
                                   fontFamily: 'Preah',
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white))
                         ])),
-                const SizedBox(
-                  height: 20,
-                ),
               ],
             ),
           ],

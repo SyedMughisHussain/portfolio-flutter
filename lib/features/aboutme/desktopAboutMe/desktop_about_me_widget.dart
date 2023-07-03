@@ -55,7 +55,7 @@ class _DesktopAboutMeState extends State<DesktopAboutMe> {
               ),
               SizedBox(width: 20),
               Text(
-                AppStrings.aboutMeExperienceText,
+                'Years of experience, Specialized in building apps, while ensuring a semaless web\n experiecne for end users.',
                 style: TextStyle(fontSize: 22, color: Colors.white, height: 1),
               ),
             ],
@@ -65,11 +65,11 @@ class _DesktopAboutMeState extends State<DesktopAboutMe> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               customContainer(AppImages.androidImage, 'ANDROID DEVELOPMENT',
-                  AppColors.bgColor, 60, 47),
+                  AppColors.bgColor, 30, 25),
               customContainer(AppImages.iosImage, 'IOS DEVELOPMENT',
-                  AppColors.bgColor, 60, 75),
+                  AppColors.bgColor, 30, 50),
               customContainer(AppImages.webImage, 'WEB DEVELOPMENT',
-                  AppColors.bgColor, 60, 75),
+                  AppColors.bgColor, 30, 50),
             ],
           ),
           // const SizedBox(
