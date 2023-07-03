@@ -56,8 +56,13 @@ class _MobileAboutMeState extends State<MobileAboutMe> {
             RichText(
                 textAlign: TextAlign.center,
                 text: const TextSpan(
-                    style: TextStyle(color: Colors.white, fontFamily: 'Preah'),
-                    children: [TextSpan(text: AppStrings.aboutMeText)])),
+                    style: TextStyle(
+                        color: Colors.white, fontFamily: 'Preah', height: 1.2),
+                    children: [
+                      TextSpan(
+                        text: AppStrings.aboutMeText,
+                      )
+                    ])),
             // Container(
             //   //margin: EdgeInsets.only(bottom: 200),
             //   child: const Text(
