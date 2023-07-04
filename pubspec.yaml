@@ -37,6 +37,7 @@ dependencies:
   flutter_social_button: ^1.1.4+1
   url_launcher:
   marquee: ^2.2.3
+  firebase_core: ^2.14.0
    
 
 
