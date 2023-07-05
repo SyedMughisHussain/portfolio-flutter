@@ -4,5 +4,5 @@ class AppStrings {
   static const String aboutMeHeading = 'About Me';
   static const String aboutMeExperienceTime = '1+';
   static const String aboutMeExperienceText =
-      'Years of experience, Specialized in building\n apps, while ensuring a semaless web\n experiecne for end users. ';
+      'Years of experience, Specialized in building apps, while ensuring a semaless web experiecne for end users.';
 }

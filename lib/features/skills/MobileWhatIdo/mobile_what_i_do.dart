@@ -36,9 +36,9 @@ class _MobileSkillsState extends State<MobileSkills> {
               ),
             ),
           ),
-          const SizedBox(
-            height: 25,
-          ),
+          // const SizedBox(
+          //   height: 15,
+          // ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -46,56 +46,56 @@ class _MobileSkillsState extends State<MobileSkills> {
                 children: [
                   customWidget('Flutter', '90%', 30),
                   const SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
                   customWidget('Dart', '85%', 60),
                   const SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
                   customWidget('Firebase', '80%', 70),
                   const SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
                   customWidget('Git', '70%', 100),
                   const SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
                   customWidget('Github', '80%', 70),
                   const SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
-                  customWidget('State Management', '80%', 70),
-                  const SizedBox(
-                    height: 15,
-                  ),
+                  // customWidget('State Management', '80%', 70),
+                  // const SizedBox(
+                  //   height: 10,
+                  // ),
                 ],
               ),
               Column(
                 children: [
                   customWidget('XML', '90%', 30),
                   const SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
                   customWidget('Java', '85%', 60),
                   const SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
                   customWidget('Kotlin', '80%', 70),
                   const SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
                   customWidget('HTML', '70%', 100),
                   const SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
                   customWidget('CSS', '80%', 70),
                   const SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
-                  customWidget('JavaScipt', '65%', 150),
-                  const SizedBox(
-                    height: 15,
-                  ),
+                  // customWidget('JavaScipt', '65%', 150),
+                  // const SizedBox(
+                  //   height: 10,
+                  // ),
                 ],
               ),
             ],

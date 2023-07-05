@@ -23,7 +23,7 @@ class _MobileProjectsState extends State<MobileProjects> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text(
-            'Some Things I\'ve Built',
+            'Projects',
             //textAlign: TextAlign.left,
             style: TextStyle(
                 fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
@@ -83,7 +83,7 @@ Widget container(
     String featured2) {
   return Container(
     alignment: Alignment.topLeft,
-    padding: const EdgeInsets.all(30),
+    //padding: const EdgeInsets.all(30),
     height: 450,
     width: 1100,
     // decoration: BoxDecoration(border: Border.all(color: Colors.white)),
@@ -99,7 +99,7 @@ Widget container(
                     end: Alignment.bottomCenter,
                     colors: [color1, color2, color3])),
             height: 200,
-            width: 350,
+            width: 270,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -113,12 +113,20 @@ Widget container(
                 const SizedBox(
                   height: 10,
                 ),
-                Text(
-                  des1,
-                  style: const TextStyle(
-                    color: Colors.black,
-                  ),
-                ),
+                RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                        style:
+                            const TextStyle(fontFamily: 'Preah', height: 1.2),
+                        children: [
+                          TextSpan(
+                            text: des1,
+                            style: const TextStyle(
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ])),
                 // SizedBox(
                 //   height: 20,
                 // ),
@@ -137,69 +145,69 @@ Widget container(
             ),
           ),
         ),
-        const SizedBox(
-          width: 15,
-        ),
-        Container(
-          padding: const EdgeInsets.only(top: 20),
-          height: 350,
-          width: 470,
-          decoration: const BoxDecoration(),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              const Text(
-                'Featured Project',
-                //textAlign: TextAlign.left,
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              Text(
-                appName,
-                style: const TextStyle(fontSize: 20),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Container(
-                padding: const EdgeInsets.all(20),
-                height: 150,
-                width: 550,
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white),
-                  color: AppColors.purpleDark,
-                ),
-                alignment: Alignment.topRight,
-                child: Text(
-                  des2,
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              const SizedBox(
-                height: 19,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text('Dart'),
-                  const Text('Flutter'),
-                  Text(featured1),
-                  Text(featured2),
-                ],
-              ),
-              // FlutterSocialButton(
-              //   onTap: () => html.window.open(githubUrl, ''),
-              //   buttonType: ButtonType.github,
-              //   iconColor: Colors.white,
-              //   mini: true,
-              // ),
-              IconButton(
-                  onPressed: () => html.window.open(githubUrl, ''),
-                  icon: const Icon(Icons.exit_to_app_outlined))
-            ],
-          ),
-        ),
+        // const SizedBox(
+        //   width: 15,
+        // ),
+        // Container(
+        //   padding: const EdgeInsets.only(top: 20),
+        //   height: 350,
+        //   width: 470,
+        //   decoration: const BoxDecoration(),
+        //   child: Column(
+        //     crossAxisAlignment: CrossAxisAlignment.end,
+        //     children: [
+        //       const Text(
+        //         'Featured Project',
+        //         //textAlign: TextAlign.left,
+        //       ),
+        //       const SizedBox(
+        //         height: 8,
+        //       ),
+        //       Text(
+        //         appName,
+        //         style: const TextStyle(fontSize: 20),
+        //       ),
+        //       const SizedBox(
+        //         height: 10,
+        //       ),
+        //       Container(
+        //         padding: const EdgeInsets.all(20),
+        //         height: 150,
+        //         width: 550,
+        //         decoration: BoxDecoration(
+        //           border: Border.all(color: Colors.white),
+        //           color: AppColors.purpleDark,
+        //         ),
+        //         alignment: Alignment.topRight,
+        //         child: Text(
+        //           des2,
+        //           textAlign: TextAlign.center,
+        //         ),
+        //       ),
+        //       const SizedBox(
+        //         height: 19,
+        //       ),
+        //       // Row(
+        //       //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //       //   children: [
+        //       //     const Text('Dart'),
+        //       //     const Text('Flutter'),
+        //       //     Text(featured1),
+        //       //     Text(featured2),
+        //       //   ],
+        //       // ),
+        //       // FlutterSocialButton(
+        //       //   onTap: () => html.window.open(githubUrl, ''),
+        //       //   buttonType: ButtonType.github,
+        //       //   iconColor: Colors.white,
+        //       //   mini: true,
+        //       // ),
+        //       // IconButton(
+        //       //     onPressed: () => html.window.open(githubUrl, ''),
+        //       //     icon: const Icon(Icons.exit_to_app_outlined))
+        //     ],
+        //   ),
+        // ),
       ],
     ),
   );

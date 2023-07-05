@@ -35,7 +35,7 @@ class MobileIntro extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const SizedBox(
-                  height: 70,
+                  height: 50,
                 ),
                 const CircleAvatar(
                   radius: 68,
@@ -59,7 +59,7 @@ class MobileIntro extends StatelessWidget {
                         text: const TextSpan(
                             style: TextStyle(
                                 fontFamily: 'Preah',
-                                fontSize: 25,
+                                fontSize: 20,
                                 color: Colors.white),
                             children: [
                           //TextSpan(text: 'I am '),
@@ -117,7 +117,7 @@ class MobileIntro extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(
-                      height: 50,
+                      height: 40,
                     ),
                     RichText(
                         textAlign: TextAlign.center,
@@ -126,7 +126,7 @@ class MobileIntro extends StatelessWidget {
                                 height: 1.2,
                                 fontWeight: FontWeight.bold,
                                 fontFamily: 'Preah',
-                                fontSize: 30,
+                                fontSize: 25,
                                 color: Colors.white),
                             children: [
                               TextSpan(
@@ -152,12 +152,12 @@ class MobileIntro extends StatelessWidget {
                               style: TextStyle(
                                 color: Colors.white,
                                 fontFamily: 'Preah',
-                                fontSize: 22,
+                                fontSize: 20,
                               )),
                           TextSpan(
                               text: 'a Tech Enthusiast ',
                               style: TextStyle(
-                                  fontSize: 22,
+                                  fontSize: 20,
                                   fontFamily: 'Preah',
                                   fontWeight: FontWeight.bold,
                                   backgroundColor:
@@ -166,7 +166,7 @@ class MobileIntro extends StatelessWidget {
                           TextSpan(
                               text: 'who loves sharing his coding journey!',
                               style: TextStyle(
-                                  fontSize: 22,
+                                  fontSize: 20,
                                   fontFamily: 'Preah',
                                   fontWeight: FontWeight.bold,
                                   color: Colors.white))

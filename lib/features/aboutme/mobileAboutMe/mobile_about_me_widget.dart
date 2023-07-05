@@ -36,7 +36,7 @@ class _MobileAboutMeState extends State<MobileAboutMe> {
                       children: [
                         TextSpan(
                             style: TextStyle(
-                                fontSize: 30, fontWeight: FontWeight.bold),
+                                fontSize: 25, fontWeight: FontWeight.bold),
                             text: AppStrings.aboutMeHeading)
                       ])),
             ),
@@ -57,7 +57,10 @@ class _MobileAboutMeState extends State<MobileAboutMe> {
                 textAlign: TextAlign.center,
                 text: const TextSpan(
                     style: TextStyle(
-                        color: Colors.white, fontFamily: 'Preah', height: 1.2),
+                        fontSize: 12,
+                        color: Colors.white,
+                        fontFamily: 'Preah',
+                        height: 1.2),
                     children: [
                       TextSpan(
                         text: AppStrings.aboutMeText,
@@ -79,6 +82,19 @@ class _MobileAboutMeState extends State<MobileAboutMe> {
             ),
             const Row(
               children: [
+                // RichText(
+                //     text: const TextSpan(children: [
+                //   TextSpan(
+                //       text: AppStrings.aboutMeExperienceTime,
+                //       style: TextStyle(
+                //           fontSize: 30,
+                //           fontWeight: FontWeight.bold,
+                //           color: Colors.white)),
+                //   TextSpan(
+                //       text: AppStrings.aboutMeExperienceText,
+                //       style: TextStyle(
+                //           height: 1, fontSize: 12, color: Colors.white))
+                // ]))
                 Text(
                   AppStrings.aboutMeExperienceTime,
                   style: TextStyle(
@@ -86,27 +102,29 @@ class _MobileAboutMeState extends State<MobileAboutMe> {
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 ),
-                SizedBox(width: 10),
-                Text(
-                  AppStrings.aboutMeExperienceText,
-                  style:
-                      TextStyle(fontSize: 12, color: Colors.white, height: 1),
+                SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    AppStrings.aboutMeExperienceText,
+                    style:
+                        TextStyle(fontSize: 12, color: Colors.white, height: 1),
+                  ),
                 ),
               ],
             ),
-            //const SizedBox(height: 20),
+            const SizedBox(height: 10),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 customContainer(AppImages.androidImage, 'ANDROID DEVELOPMENT',
                     AppColors.bgColor, 13, 15),
                 const SizedBox(
-                  height: 10,
+                  height: 8,
                 ),
                 customContainer(AppImages.iosImage, 'IOS DEVELOPMENT',
                     AppColors.bgColor, 10, 35),
                 const SizedBox(
-                  height: 10,
+                  height: 8,
                 ),
                 customContainer(AppImages.webImage, 'WEB DEVELOPMENT',
                     AppColors.bgColor, 10, 35),
