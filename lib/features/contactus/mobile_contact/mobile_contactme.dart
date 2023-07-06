@@ -20,7 +20,7 @@ class _MobileContactMeState extends State<MobileContactMe> {
     return Container(
       height: 400,
       width: 1100,
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       alignment: Alignment.topLeft,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -29,31 +29,33 @@ class _MobileContactMeState extends State<MobileContactMe> {
             'Get in Touch',
             style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 40,
+              fontSize: 30,
               color: Colors.white,
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 15,
           ),
           const Text(
-            'If you are a student, enterpreneur or just want to chat with me, drop me an interesting mail at 👇\n',
+            'If you are a student, enterpreneur or just want to chat with me, drop me an interesting mail at 👇',
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 15,
               color: Colors.white,
             ),
           ),
           const Text(
             'syedmughis4541@gmail.com',
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 15,
               color: AppColors.purple,
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 15,
           ),
           Row(
+            //crossAxisAlignment: CrossAxisAlignment.center,
+            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               FlutterSocialButton(
                 onTap: () => html.window.open(
@@ -96,21 +98,21 @@ class _MobileContactMeState extends State<MobileContactMe> {
             ],
           ),
           const SizedBox(
-            height: 15,
+            height: 10,
           ),
           const Divider(
             color: Colors.white,
             height: 2,
           ),
           const SizedBox(
-            height: 10,
+            height: 8,
           ),
           Container(
             alignment: Alignment.center,
             child: const Text(
               'Coded by Syed Mughis Hussain with ❤ in Pakistan',
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20, color: Colors.white),
+              style: TextStyle(fontSize: 15, color: Colors.white),
             ),
           ),
         ],

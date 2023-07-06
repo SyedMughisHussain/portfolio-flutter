@@ -22,17 +22,13 @@ class _MobileSkillsState extends State<MobileSkills> {
       child: Column(
         children: [
           Container(
-            //alignment: Alignment.bottomLeft,
-            //margin: const EdgeInsets.only(right: 980),
-            child: Container(
-              alignment: Alignment.topLeft,
-              child: const Text(
-                'Skills',
-                style: TextStyle(
-                  fontFamily: 'Preah',
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
-                ),
+            alignment: Alignment.topLeft,
+            child: const Text(
+              'Skills',
+              style: TextStyle(
+                fontFamily: 'Preah',
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
               ),
             ),
           ),

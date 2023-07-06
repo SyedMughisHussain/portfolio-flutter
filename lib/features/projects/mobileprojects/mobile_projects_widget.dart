@@ -28,9 +28,9 @@ class _MobileProjectsState extends State<MobileProjects> {
             style: TextStyle(
                 fontSize: 30, fontWeight: FontWeight.bold, color: Colors.white),
           ),
-          const SizedBox(
-            height: 15,
-          ),
+          // const SizedBox(
+          //   height: 10,
+          // ),
           container(
               'Meals App',
               'Meals app made with flutter framework.',
@@ -40,8 +40,8 @@ class _MobileProjectsState extends State<MobileProjects> {
               const Color.fromARGB(255, 193, 242, 195),
               const Color.fromARGB(255, 242, 178, 174),
               const Color.fromARGB(255, 235, 192, 242),
-              'Filtering in meals',
-              'Navigation Routes'),
+              'UI',
+              'Routes'),
           container2(
               'Todo App',
               'Todo App made with flutter framework.',
@@ -86,9 +86,220 @@ Widget container(
     //padding: const EdgeInsets.all(30),
     height: 450,
     width: 1100,
-    // decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-    child: Row(
+    //decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+    child: Column(
       children: [
+        // const SizedBox(
+        //   width: 15,
+        // ),
+        Container(
+          alignment: Alignment.topLeft,
+          padding: const EdgeInsets.only(top: 10),
+          height: 250,
+          width: 470,
+          decoration: const BoxDecoration(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Featured Project',
+                //textAlign: TextAlign.left,
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Text(
+                appName,
+                style: const TextStyle(fontSize: 15),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Container(
+                padding: const EdgeInsets.all(10),
+                height: 100,
+                width: 550,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white),
+                  color: AppColors.purpleDark,
+                ),
+                alignment: Alignment.topRight,
+                child: Text(
+                  des2,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text('Dart'),
+                  const Text('Flutter'),
+                  Text(featured1),
+                  Text(featured2),
+                ],
+              ),
+              // FlutterSocialButton(
+              //   onTap: () => html.window.open(githubUrl, ''),
+              //   buttonType: ButtonType.github,
+              //   iconColor: Colors.white,
+              //   mini: true,
+              // ),
+              // Container(
+              //   alignment: Alignment.topRight,
+              //   child: IconButton(
+              //       onPressed: () => html.window.open(githubUrl, ''),
+              //       icon: const Icon(Icons.exit_to_app_outlined)),
+              // )
+            ],
+          ),
+        ),
+        InkWell(
+          onTap: () => html.window.open(githubUrl, ''),
+          child: Container(
+            decoration: BoxDecoration(
+                // border: Border.all(color: Colors.white),
+                gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [color1, color2, color3])),
+            height: 190,
+            width: 270,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(
+                  appName,
+                  style: const TextStyle(fontSize: 20, color: Colors.black),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                        style:
+                            const TextStyle(fontFamily: 'Preah', height: 1.2),
+                        children: [
+                          TextSpan(
+                            text: des1,
+                            style: const TextStyle(
+                              fontSize: 14,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ])),
+                // SizedBox(
+                //   height: 20,
+                // ),
+                Container(
+                  //padding: EdgeInsets.only(top: 20),
+                  margin: const EdgeInsets.only(left: 20, right: 20),
+                  child: Image.asset(
+                    url,
+                    fit: BoxFit.contain,
+                    alignment: Alignment.bottomCenter,
+                    height: 100,
+                    width: 300,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
+Widget container2(
+    String appName,
+    String des1,
+    String url,
+    String githubUrl,
+    String des2,
+    Color color1,
+    Color color2,
+    Color color3,
+    String featured1,
+    String featured2) {
+  return Container(
+    alignment: Alignment.topLeft,
+    //padding: const EdgeInsets.all(30),
+    height: 450,
+    width: 1100,
+    //decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+    child: Column(
+      children: [
+        SizedBox(
+          // decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+          //padding: const EdgeInsets.only(top: 20),
+          height: 250,
+          width: 470,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Featured Project',
+                //textAlign: TextAlign.left,
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Text(
+                appName,
+                style: const TextStyle(fontSize: 15),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              Container(
+                padding: const EdgeInsets.all(10),
+                height: 100,
+                width: 550,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white),
+                  color: AppColors.purpleDark,
+                ),
+                alignment: Alignment.topRight,
+                child: Text(
+                  des2,
+                  style: const TextStyle(fontSize: 10),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text('Dart'),
+                  const Text('Flutter'),
+                  Text(featured1),
+                  Text(featured2),
+                ],
+              ),
+              // FlutterSocialButton(
+              //   onTap: () => html.window.open(githubUrl, ''),
+              //   buttonType: ButtonType.github,
+              //   iconColor: Colors.white,
+              //   mini: true,
+              // // ),
+              // Container(
+              //   alignment: Alignment.topRight,
+              //   child: IconButton(
+              //       onPressed: () => html.window.open(githubUrl, ''),
+              //       icon: const Icon(Icons.exit_to_app_outlined)),
+              // )
+            ],
+          ),
+        ),
         InkWell(
           onTap: () => html.window.open(githubUrl, ''),
           child: Container(
@@ -139,204 +350,6 @@ Widget container(
                     alignment: Alignment.bottomCenter,
                     height: 100,
                     width: 300,
-                  ),
-                )
-              ],
-            ),
-          ),
-        ),
-        // const SizedBox(
-        //   width: 15,
-        // ),
-        // Container(
-        //   padding: const EdgeInsets.only(top: 20),
-        //   height: 350,
-        //   width: 470,
-        //   decoration: const BoxDecoration(),
-        //   child: Column(
-        //     crossAxisAlignment: CrossAxisAlignment.end,
-        //     children: [
-        //       const Text(
-        //         'Featured Project',
-        //         //textAlign: TextAlign.left,
-        //       ),
-        //       const SizedBox(
-        //         height: 8,
-        //       ),
-        //       Text(
-        //         appName,
-        //         style: const TextStyle(fontSize: 20),
-        //       ),
-        //       const SizedBox(
-        //         height: 10,
-        //       ),
-        //       Container(
-        //         padding: const EdgeInsets.all(20),
-        //         height: 150,
-        //         width: 550,
-        //         decoration: BoxDecoration(
-        //           border: Border.all(color: Colors.white),
-        //           color: AppColors.purpleDark,
-        //         ),
-        //         alignment: Alignment.topRight,
-        //         child: Text(
-        //           des2,
-        //           textAlign: TextAlign.center,
-        //         ),
-        //       ),
-        //       const SizedBox(
-        //         height: 19,
-        //       ),
-        //       // Row(
-        //       //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        //       //   children: [
-        //       //     const Text('Dart'),
-        //       //     const Text('Flutter'),
-        //       //     Text(featured1),
-        //       //     Text(featured2),
-        //       //   ],
-        //       // ),
-        //       // FlutterSocialButton(
-        //       //   onTap: () => html.window.open(githubUrl, ''),
-        //       //   buttonType: ButtonType.github,
-        //       //   iconColor: Colors.white,
-        //       //   mini: true,
-        //       // ),
-        //       // IconButton(
-        //       //     onPressed: () => html.window.open(githubUrl, ''),
-        //       //     icon: const Icon(Icons.exit_to_app_outlined))
-        //     ],
-        //   ),
-        // ),
-      ],
-    ),
-  );
-}
-
-Widget container2(
-    String appName,
-    String des1,
-    String url,
-    String githubUrl,
-    String des2,
-    Color color1,
-    Color color2,
-    Color color3,
-    String featured1,
-    String featured2) {
-  return Container(
-    alignment: Alignment.topLeft,
-    padding: const EdgeInsets.all(30),
-    height: 450,
-    width: 1100,
-    //decoration: BoxDecoration(border: Border.all(color: Colors.white)),
-    child: Row(
-      children: [
-        Container(
-          padding: const EdgeInsets.only(top: 20),
-          height: 350,
-          width: 470,
-          decoration: const BoxDecoration(),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Featured Project',
-                //textAlign: TextAlign.left,
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              Text(
-                appName,
-                style: const TextStyle(fontSize: 25),
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              Container(
-                padding: const EdgeInsets.all(20),
-                height: 150,
-                width: 550,
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white),
-                  color: AppColors.purpleDark,
-                ),
-                alignment: Alignment.topRight,
-                child: Text(
-                  des2,
-                  textAlign: TextAlign.center,
-                ),
-              ),
-              const SizedBox(
-                height: 19,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text('Dart'),
-                  const Text('Flutter'),
-                  Text(featured1),
-                  Text(featured2),
-                ],
-              ),
-              // FlutterSocialButton(
-              //   onTap: () => html.window.open(githubUrl, ''),
-              //   buttonType: ButtonType.github,
-              //   iconColor: Colors.white,
-              //   mini: true,
-              // ),
-              IconButton(
-                  onPressed: () => html.window.open(githubUrl, ''),
-                  icon: const Icon(Icons.exit_to_app_outlined))
-            ],
-          ),
-        ),
-        const SizedBox(
-          width: 15,
-        ),
-        InkWell(
-          onTap: () => html.window.open(githubUrl, ''),
-          child: Container(
-            decoration: BoxDecoration(
-                // border: Border.all(color: Colors.white),
-                gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [color1, color2, color3])),
-            height: 350,
-            width: 550,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const SizedBox(
-                  height: 20,
-                ),
-                Text(
-                  appName,
-                  style: const TextStyle(fontSize: 20, color: Colors.black),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  des1,
-                  style: const TextStyle(
-                    color: Colors.black,
-                  ),
-                ),
-                // SizedBox(
-                //   height: 20,
-                // ),
-                Container(
-                  //padding: EdgeInsets.only(top: 20),
-                  margin: const EdgeInsets.only(left: 20, right: 20),
-                  child: Image.asset(
-                    url,
-                    fit: BoxFit.contain,
-                    alignment: Alignment.bottomCenter,
-                    height: 257,
-                    width: 440,
                   ),
                 )
               ],

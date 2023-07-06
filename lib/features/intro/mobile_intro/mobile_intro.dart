@@ -16,8 +16,8 @@ class MobileIntro extends StatelessWidget {
     return Container(
         // decoration: const BoxDecoration(
         //     gradient: LinearGradient(
-        //         begin: Alignment.topLeft,
-        //         end: Alignment.bottomRight,
+        //         begin: Alignment.bottomLeft,
+        //         end: Alignment.topCenter,
         //         colors: [
         //       AppColors.purple,
         //       AppColors.bgColor,
