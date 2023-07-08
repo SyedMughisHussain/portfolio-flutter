@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:web_app/design/constants/app_images.dart';
 import 'package:web_app/design/constants/utils/app_colors.dart';
 import '../../../design/constants/app_String.dart';
+import 'package:hovering/hovering.dart';
 
 class DesktopAboutMe extends StatefulWidget {
   const DesktopAboutMe({super.key});
@@ -83,38 +84,41 @@ class _DesktopAboutMeState extends State<DesktopAboutMe> {
 
 Widget customContainer(String imageUrl, String text, Color bColor,
     double vertical, double horizontal) {
-  return MouseRegion(
-    child: Container(
-      padding: EdgeInsets.symmetric(vertical: vertical, horizontal: horizontal),
-      decoration: BoxDecoration(
-        color: bColor,
-        border: Border.all(width: 2, color: Colors.white),
-      ),
-      //constraints: const BoxConstraints(maxHeight: 200, maxWidth: 350),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image(
-            image: AssetImage(imageUrl),
-            fit: BoxFit.cover,
-            height: 60,
-          ),
-          const SizedBox(
-            height: 15,
-          ),
-          FittedBox(
-            child: Text(
-              text,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 20,
-              ),
+  return HoverAnimatedContainer(
+    hoverDecoration: const BoxDecoration(
+        gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [AppColors.purple, AppColors.violet])),
+    padding: EdgeInsets.symmetric(vertical: vertical, horizontal: horizontal),
+    decoration: BoxDecoration(
+      color: bColor,
+      border: Border.all(width: 2, color: Colors.white),
+    ),
+    //constraints: const BoxConstraints(maxHeight: 200, maxWidth: 350),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image(
+          image: AssetImage(imageUrl),
+          fit: BoxFit.cover,
+          height: 60,
+        ),
+        const SizedBox(
+          height: 15,
+        ),
+        FittedBox(
+          child: Text(
+            text,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20,
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     ),
   );
 }
